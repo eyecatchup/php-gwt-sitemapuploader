@@ -1,6 +1,7 @@
-# GWT_SitemapsUpload: Upload XML Sitemaps to Google Webmaster Tools
+# GWT_SitemapsUpload: Submit XML Sitemaps to Google Webmaster Tools
 
-With GWT_SitemapsUpload you can upload a bunch of XML Sitemaps to your Google Webmaster Tools Account at once.
+With GWT_SitemapsUpload you can submit a bunch of XML Sitemaps to your Google Webmaster Tools Account at once.
+More specifically, you can submit unlimited sitemaps with just one single line - `new GWT_SitemapsUpload($sitemaps);`!
 
 ## Usage
 
