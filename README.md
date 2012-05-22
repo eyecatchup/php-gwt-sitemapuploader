@@ -7,6 +7,7 @@ With GWT_SitemapsUpload you can upload a bunch of XML Sitemaps to your Google We
 ### Interface
 For the ease of use, set your account using the class interface `GWT_Client`
 ```php
+<?php
 interface GWT_Client
 {
     const Email = 'user@gmail.com';
@@ -34,14 +35,13 @@ try {
     'http://www.domain.tld/sitemaps/sitemap-9.xml',
     'http://www.domain.tld/sitemaps/sitemap-10.xml'
   );
-```
-```php
+
   /** Example 1
    *  Just upload (assumes login via interface)
    */
     new GWT_SitemapsUpload($sitemaps); # Boom - that's it! :)
-```
-```php
+
+
   /** Example 2
    *  Upload and Feedback (assumes login via interface)
    */
@@ -53,8 +53,8 @@ try {
         $response = $request['Response'];
         print "HTTP response for submit request of $sitemap: $response\n";
     }
-```
-```php
+
+
   /** Example 3
    *  Login on create
    */
