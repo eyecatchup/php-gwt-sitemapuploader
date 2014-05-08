@@ -84,6 +84,11 @@ class GWT_SitemapsUpload implements GWT_Client
         'Passwd' => $clientPasswd,
         'service' => 'sitemaps',
         'source' => 'GWT_SitemapUpload-0.1-php');
+    // Before PHP version 5.2.0 and when the first char of $pass is an @ symbol, 
+    // send data in CURLOPT_POSTFIELDS as urlencoded string.
+    if ('@' === (string)$clientPasswd[0] || version_compare(PHP_VERSION, '5.2.0') < 0) {
+        $postData = http_build_query($postData);
+    }
     $requestPath = $this->GWT_Server['path']['login'];
     $response = self::CurlPost($requestPath, $postData);
     @preg_match('/Auth=(.*)/', $response, $match);
